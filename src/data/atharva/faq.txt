@@ -1,0 +1,23 @@
+Q: What is Atharva's primary area of expertise?
+A: Atharva specializes in Python programming, data science, and machine learning with 8 years of professional experience.
+
+Q: What programming languages does Atharva know?
+A: Atharva is proficient in Python as his primary language, with knowledge of JavaScript, SQL, and Bash scripting.
+
+Q: What are the main projects Atharva has worked on?
+A: Atharva has worked on web scraping frameworks, sentiment analysis models, automated testing suites, recommendation engines, NLP pipelines, and deepfake detection systems.
+
+Q: Does Atharva have experience with cloud platforms?
+A: Yes, Atharva has experience with AWS and Google Cloud Platform for deploying and scaling applications.
+
+Q: What web frameworks does Atharva use?
+A: Atharva uses Django, FastAPI, and Flask for web development projects.
+
+Q: How much teaching experience does Atharva have?
+A: Atharva has delivered workshops and training sessions to hundreds of professionals and students.
+
+Q: What is Atharva's approach to technology?
+A: Atharva believes in making technology accessible, continuous learning, and contributing to the open-source community.
+
+Q: What machine learning libraries does Atharva work with?
+A: Atharva uses scikit-learn, TensorFlow, PyTorch, and other popular machine learning libraries for model development.

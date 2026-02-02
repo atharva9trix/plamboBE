@@ -1,0 +1,132 @@
+OPTIMA BATTERIES – KNOWLEDGE BASE
+================================
+
+APPEND INSTRUCTIONS
+-------------------
+This knowledge base is intended to be appended over any existing OPTIMA-related knowledge.
+Do not remove prior content unless explicitly deprecated.
+Newer information should be treated as additive unless conflicts are identified.
+
+--------------------------------------------------
+
+1. Company Background
+OPTIMA Batteries is a battery manufacturer with over 40 years of history.
+The company was founded in 1972.
+Its original innovation was the development of a maintenance-free lead-acid battery.
+OPTIMA pioneered the SpiralCell design, the first spiral-wound AGM automotive battery.
+
+2. Ownership and Brand
+OPTIMA Batteries originated as a division of Gates Rubber Company.
+In 2000, OPTIMA was acquired by Johnson Controls.
+In 2019, OPTIMA became part of Clarios after a corporate spin-off.
+OPTIMA is currently a brand under Clarios.
+
+3. Core Technology
+OPTIMA Batteries use AGM (Absorbent Glass Mat) technology.
+All lead-acid OPTIMA batteries use SpiralCell technology.
+SpiralCell technology uses high-purity lead plates wound into tightly packed spiral cells.
+This design lowers internal resistance and increases electrical efficiency.
+
+4. SpiralCell Design Characteristics
+SpiralCell construction prevents shedding of active material.
+The design provides exceptional vibration resistance.
+Cells are immobilized, improving durability in harsh environments.
+The batteries are fully sealed and non-spillable.
+
+5. General Performance Characteristics
+OPTIMA batteries provide higher cranking power than conventional lead-acid batteries.
+They recharge faster than traditional flooded batteries.
+They offer significantly longer cycle life.
+They exhibit extremely low self-discharge rates.
+
+6. Voltage and Electrical Standards
+OPTIMA lead-acid batteries are 12-volt systems.
+Lithium ORANGETOP batteries operate at nominal 12.8 volts.
+OPTIMA batteries are designed for voltage-regulated charging systems.
+
+7. Product Line Structure
+OPTIMA batteries are organized into color-coded product lines.
+Each product line is designed for specific use cases.
+All RedTop, YellowTop, and BlueTop batteries are AGM lead-acid batteries.
+OrangeTop batteries use lithium (LiFePO₄) chemistry.
+
+8. RedTop Product Line
+RedTop batteries are designed primarily for engine starting.
+They provide very high cold cranking amperage (CCA).
+They are optimized for immediate recharge from an alternator.
+RedTop batteries are commonly used in cars, trucks, SUVs, and equipment.
+
+9. RedTop Performance Traits
+RedTop batteries prioritize cranking power over deep cycling.
+They typically have moderate amp-hour capacity.
+They can be mounted in any orientation.
+They are up to 15 times more vibration resistant than conventional batteries.
+
+10. YellowTop Product Line
+YellowTop batteries are dual-purpose batteries.
+They support both engine starting and deep-cycle applications.
+They are designed for vehicles with high electrical loads.
+YellowTop batteries have thicker plates and higher reserve capacity than RedTop.
+
+11. YellowTop Use Cases
+YellowTop batteries are used in vehicles with winches, audio systems, and electronics.
+They support repeated discharge and recharge cycles.
+They are suitable for commercial vehicles and specialty equipment.
+
+12. BlueTop Product Line
+BlueTop batteries are designed for marine and RV applications.
+There are two BlueTop variants: starting-only and dual-purpose.
+Dual-purpose BlueTop batteries support deep-cycle usage.
+BlueTop batteries are resistant to moisture and vibration.
+
+13. BlueTop Design Features
+BlueTop batteries may include dual terminals (top posts and side studs).
+They are suitable for boats, RVs, and off-road vehicles.
+They provide high reserve capacity for accessory loads.
+
+14. OrangeTop Product Line
+OrangeTop batteries use lithium iron phosphate (LiFePO₄) chemistry.
+They are designed for lightweight, high-cranking applications.
+OrangeTop batteries are used in powersports and compact vehicles.
+They require lithium-compatible chargers.
+
+15. Charging Requirements
+OPTIMA AGM batteries require AGM-compatible charging profiles.
+Recommended charging voltage ranges between 13.8V and 15.0V.
+Float charging should remain between 13.2V and 13.8V.
+Overcharging above approximately 15.6V can cause gassing.
+
+16. Maintenance Characteristics
+OPTIMA batteries are maintenance-free.
+No water refilling is required.
+They are sealed and do not normally vent gases.
+
+17. Storage Guidelines
+OPTIMA batteries have very low self-discharge.
+A fully charged battery can retain charge for 8 to 12 months in storage.
+For long-term storage with connected electronics, a maintainer is recommended.
+
+18. Safety Considerations
+OPTIMA batteries do not emit gas under normal charging conditions.
+Gassing occurs only under extreme overvoltage or heat.
+Batteries should be charged in ventilated areas.
+
+19. Installation Guidelines
+Correct BCI group size must be selected.
+Proper clearance above terminals is required.
+Batteries must be securely mounted to prevent damage.
+Parallel installations require identical battery models.
+
+20. Warranty Overview
+OPTIMA batteries include a limited warranty.
+Warranty terms vary by product and application.
+Free replacement is available during the initial coverage period.
+Warranty coverage requires proof of purchase.
+Abuse, overcharging, or neglect voids warranty coverage.
+
+21. Support and Resources
+OPTIMA provides technical support via phone and email.
+Documentation includes spec sheets, brochures, and maintenance guides.
+The company provides fitment tools and glossaries to explain battery terminology.
+
+END OF KNOWLEDGE BASE

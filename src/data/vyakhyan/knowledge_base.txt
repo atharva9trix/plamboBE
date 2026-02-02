@@ -1,0 +1,19 @@
+Vyakhyan is an AI-powered Conversational Business Intelligence (BI) platform developed by Navaantrix Pvt Ltd. The platform is designed to democratize data analytics across organizations by allowing users to interact with business data using natural language, without requiring technical skills such as SQL or programming.
+
+Vyakhyan functions as a “digital analyst on demand.” Users can ask questions about their data in plain language, similar to having a conversation with a colleague, and receive clear answers, metrics, charts, and narrative explanations in response.
+
+The platform is built for multi-platform accessibility. Vyakhyan can be used as a web application on desktop systems, on mobile devices for on-the-go insights, and on large displays for team huddles, operational reviews, and boardroom presentations. This enables access to insights for users ranging from shop-floor operators to senior executives.
+
+A core capability of Vyakhyan is its conversational interface. Users can ask business questions in natural language and receive instant analytical responses without navigating complex dashboards or waiting for analysts. The system generates both visual outputs, such as charts and KPIs, and narrative explanations that highlight trends, anomalies, and patterns in the data.
+
+Vyakhyan supports data integration through plug-and-play connectors for common data sources such as Excel files and SQL databases. This allows organizations to unify data from systems including ERP, CRM, POS, and IoT platforms into a single analytical interface.
+
+In addition to structured data analysis, Vyakhyan supports Retrieval-Augmented Generation (RAG) for unstructured data. This enables the platform to analyze documents such as legal contracts, policy manuals, and compliance documents, helping organizations identify risks, inconsistencies, and gaps in compliance.
+
+A distinguishing feature of Vyakhyan is its AI-powered narrative generation. Rather than presenting only static charts or tables, the platform generates contextual explanations that help users understand why certain metrics behave the way they do. This reduces the risk of missed insights and improves decision-making speed.
+
+From a technical and security standpoint, Vyakhyan is designed to be private and lightweight. The platform runs on CPU-only local Large Language Models using frameworks such as Ollama and LM Studio. This architecture allows Vyakhyan to operate fully on-premise, ensuring that sensitive business data such as financial metrics, operational KPIs, and contract details never leave the organization’s firewall or get transmitted to external cloud services.
+
+Vyakhyan is customizable for small and medium enterprises (SMEs) across multiple industries. In manufacturing environments, it is used to monitor Overall Equipment Effectiveness (OEE), identify machine downtime causes, and analyze production efficiency. In retail and wholesale businesses, it supports tracking SKU performance, customer return rates, and demand patterns. In logistics operations, the platform helps monitor regional underperformance, supply chain delays, and operational bottlenecks. In legal and compliance contexts, Vyakhyan assists in evaluating large volumes of contracts and policy documents through document-based analysis.
+
+Overall, Vyakhyan replaces traditional static dashboards and analyst-dependent workflows with a conversational, explainable, and privacy-first analytics experience.

@@ -1,0 +1,29 @@
+Q: What does Client B do?
+A: Client B is a healthcare analytics company focused on improving patient outcomes through data-driven insights and AI.
+
+Q: When was Client B founded?
+A: Client B was founded in 2015 and is headquartered in San Francisco.
+
+Q: What is the HealthAnalytics platform?
+A: HealthAnalytics is an integrated analytics solution that connects to electronic health records to analyze patient data and support clinical decision-making.
+
+Q: How does HealthAnalytics help hospitals?
+A: HealthAnalytics provides predictive models to identify high-risk patients, recommend preventive interventions, and help hospitals reduce readmissions.
+
+Q: What is the readmission prevention system?
+A: The readmission prevention system identifies at-risk patients and provides targeted interventions to prevent hospital readmissions.
+
+Q: How effective is Client B's risk stratification?
+A: Client B's risk stratification models achieve 85% accuracy in predicting hospital readmissions.
+
+Q: What is population health management?
+A: Population health management involves tracking patients with chronic conditions and providing personalized treatment recommendations to manage their health.
+
+Q: How does clinical decision support work?
+A: The clinical decision support system provides evidence-based recommendations to clinicians based on clinical guidelines and patient-specific data.
+
+Q: What healthcare standards does Client B support?
+A: Client B supports HL7 and FHIR standards for healthcare data exchange and interoperability.
+
+Q: Does Client B support remote patient monitoring?
+A: Yes, Client B developed a telehealth integration platform that supports remote monitoring devices, video consultations, and asynchronous messaging.

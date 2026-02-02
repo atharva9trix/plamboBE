@@ -1,0 +1,71 @@
+OPTIMA BATTERIES – FAQ
+=====================
+
+APPEND INSTRUCTIONS
+-------------------
+This FAQ may be appended to existing OPTIMA FAQs.
+Questions are atomic and independent.
+
+--------------------------------------------------
+
+Q1. What is OPTIMA Batteries?
+OPTIMA Batteries is a battery manufacturer known for AGM and lithium battery technology.
+
+Q2. When was OPTIMA Batteries founded?
+OPTIMA Batteries was founded in 1972.
+
+Q3. What is SpiralCell technology?
+SpiralCell technology uses tightly wound pure lead plates in AGM construction.
+
+Q4. Are OPTIMA batteries maintenance-free?
+Yes, OPTIMA batteries require no water refilling or routine maintenance.
+
+Q5. What type of batteries does OPTIMA manufacture?
+OPTIMA manufactures AGM lead-acid batteries and lithium (LiFePO₄) batteries.
+
+Q6. What is the difference between RedTop and YellowTop?
+RedTop is designed for engine starting, while YellowTop supports deep-cycle use.
+
+Q7. What applications are YellowTop batteries used for?
+They are used in vehicles with high electrical loads and repeated cycling.
+
+Q8. What are BlueTop batteries used for?
+BlueTop batteries are used in marine, RV, and off-road applications.
+
+Q9. Are BlueTop batteries deep-cycle?
+Some BlueTop models are dual-purpose and support deep-cycle usage.
+
+Q10. What is OrangeTop?
+OrangeTop is OPTIMA’s lithium battery line for lightweight, high-crank applications.
+
+Q11. Can OPTIMA batteries be mounted sideways?
+Yes, AGM OPTIMA batteries can be mounted in multiple orientations.
+
+Q12. Do OPTIMA batteries leak acid?
+No, they are sealed and spill-proof.
+
+Q13. What charging voltage is recommended?
+Charging voltage should typically be between 13.8V and 15.0V.
+
+Q14. Can OPTIMA batteries be overcharged?
+Yes, overcharging above recommended voltage can cause damage.
+
+Q15. How long can an OPTIMA battery sit in storage?
+A fully charged battery can last 8–12 months in storage.
+
+Q16. Do OPTIMA batteries emit gas?
+They do not emit gas under normal charging conditions.
+
+Q17. What company owns OPTIMA Batteries?
+OPTIMA is a brand under Clarios.
+
+Q18. Are OPTIMA batteries recyclable?
+Yes, they are recyclable through certified facilities.
+
+Q19. Is OPTIMA a gel battery?
+No, OPTIMA batteries are AGM, not gel.
+
+Q20. Where can OPTIMA batteries be purchased?
+They are sold through authorized automotive, marine, and battery retailers.
+
+END OF FAQ

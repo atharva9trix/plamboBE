@@ -1,0 +1,38 @@
+Atharva began his professional career in 2016 as a Junior Developer at a software startup.
+In his initial role, he worked primarily on web development using Python and the Django framework.
+His responsibilities included building backend APIs, developing server-side logic, and supporting frontend integration.
+
+During his first three years, Atharva focused on creating scalable web applications and improving code quality.
+He gained hands-on experience with software engineering best practices such as version control, debugging, code reviews, and deployment workflows.
+This phase helped him build a strong foundation in problem-solving and system design.
+
+In 2019, Atharva transitioned into data science and machine learning roles.
+He began working on projects related to data analysis, predictive modeling, and statistical analysis.
+He used Python-based libraries for data processing, model training, and evaluation.
+
+Atharva later expanded his expertise into natural language processing.
+He worked on projects involving text classification, sentiment analysis, and information extraction.
+These projects were applied to real-world use cases such as content moderation, automation, and intelligent data systems.
+
+Over the course of his career, Atharva has led small teams of developers.
+He has mentored junior engineers by guiding them on coding standards, project execution, and career development.
+He has taken responsibility for task planning, technical decision-making, and delivery timelines.
+
+Atharva has worked with both early-stage startups and established technology companies.
+This exposure allowed him to adapt to fast-paced environments as well as structured corporate workflows.
+He has collaborated with cross-functional teams including product managers, designers, and QA engineers.
+
+Atharva has actively contributed to open-source software projects.
+He maintains several public repositories that focus on automation, AI experimentation, and learning resources.
+These repositories are used by developers and learners for reference and practical implementation.
+
+In recent years, Atharva has focused on AI-driven applications and automation testing.
+He has worked extensively with Selenium and Python to build automated testing frameworks.
+He has also explored the use of AI models to improve testing efficiency and data validation.
+
+Alongside his technical work, Atharva has been involved in educational content creation.
+He has delivered workshops and training sessions on software development, automation testing, and AI fundamentals.
+These sessions have been attended by hundreds of students and working professionals.
+
+Atharva’s career reflects a progression from core software development to advanced AI applications, leadership, and knowledge sharing.
+His current focus is on building reliable, scalable, and intelligent systems while mentoring others in the field.

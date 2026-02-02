@@ -1,0 +1,12 @@
+Client B developed the HealthAnalytics platform, an integrated analytics solution for healthcare providers.
+The HealthAnalytics platform connects to electronic health records systems to analyze patient data.
+Client B created predictive models for patient risk stratification that identify high-risk patients.
+The risk stratification models achieve 85% accuracy in predicting hospital readmissions.
+Client B built a readmission prevention system that provides targeted interventions for at-risk patients.
+The readmission prevention system has helped hospitals reduce readmissions by up to 30%.
+Client B developed population health management tools for managing patients with chronic conditions.
+The population health tools track patient progress and provide personalized treatment recommendations.
+Client B created clinical decision support systems that provide evidence-based recommendations to clinicians.
+The decision support system integrates clinical guidelines and patient-specific data.
+Client B developed a telehealth integration platform that connects remote patient monitoring with clinical workflows.
+The telehealth platform supports video consultations, remote monitoring devices, and asynchronous messaging.

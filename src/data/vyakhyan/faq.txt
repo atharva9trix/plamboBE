@@ -1,0 +1,26 @@
+Q: What is Vyakhyan?
+A: Vyakhyan is an AI-powered Conversational Business Intelligence platform that allows users to ask questions about their data using natural language.
+
+Q: Who developed Vyakhyan?
+A: Vyakhyan was developed by Navaantrix Pvt Ltd.
+
+Q: Does Vyakhyan require SQL or coding knowledge?
+A: No. Users can interact with data using plain language without writing SQL queries or code.
+
+Q: Can Vyakhyan work with Excel and databases?
+A: Yes. Vyakhyan supports plug-and-play connectors for Excel files and SQL databases.
+
+Q: Does Vyakhyan support unstructured documents?
+A: Yes. Vyakhyan uses Retrieval-Augmented Generation (RAG) to analyze unstructured documents such as contracts and policy files.
+
+Q: Is Vyakhyan cloud-based?
+A: No. Vyakhyan runs on local, CPU-only language models and is designed for on-premise deployment.
+
+Q: Is business data sent outside the organization?
+A: No. All processing happens locally, ensuring sensitive data remains within the organization’s firewall.
+
+Q: What industries can use Vyakhyan?
+A: Vyakhyan is used across manufacturing, retail, wholesale, logistics, and legal domains.
+
+Q: Can Vyakhyan be used on mobile devices?
+A: Yes. Vyakhyan is designed to work on desktops, mobile devices, and large displays.

@@ -1,0 +1,30 @@
+Navaantrix is a technology-driven company focused on delivering custom software solutions, automation systems, and AI-enabled platforms for businesses.
+
+The core mission of Navaantrix is to help organizations improve operational efficiency, scalability, and decision-making through tailored technology solutions rather than off-the-shelf products.
+
+Navaantrix primarily works with startups, SMEs, and enterprise teams that require customized backend systems, web applications, automation pipelines, and AI-powered tools.
+
+Key service areas of Navaantrix include:
+
+1. Custom Software Development
+Navaantrix designs and develops backend systems, APIs, and full-stack applications based on specific business requirements. Solutions are built to be scalable, secure, and maintainable.
+
+2. Automation Solutions
+The company builds automation workflows for repetitive business processes, data handling, testing, and internal operations. This includes script-based automation, process optimization, and system integration.
+
+3. AI and Data Solutions
+Navaantrix develops AI-powered systems such as chatbots, data analysis tools, and internal knowledge systems. These solutions are typically deployed in private, on-premise, or controlled environments.
+
+4. System Integration
+Navaantrix integrates multiple tools, platforms, and services into a unified workflow, ensuring smooth data exchange and operational continuity.
+
+5. Consulting and Technical Advisory
+The company provides technical consulting to help businesses choose architectures, optimize existing systems, and plan technology roadmaps.
+
+What Navaantrix does NOT do:
+- It does not provide generic SaaS products for public use.
+- It does not offer marketing, PR, or CRM services.
+- It does not provide financial, legal, or medical advice.
+- It does not operate as a cloud-only service provider.
+
+All Navaantrix solutions are designed with privacy, security, and client-specific requirements in mind. Projects are executed with strict scope boundaries defined by client needs.

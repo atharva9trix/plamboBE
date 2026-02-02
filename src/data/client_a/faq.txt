@@ -1,0 +1,47 @@
+Q: What is FinFraud?
+A: FinFraud is a financial technology company that builds fraud detection, secure payment infrastructure, and transaction risk management systems.
+
+Q: What is FraudShield?
+A: FraudShield is FinFraud’s real-time fraud detection platform that monitors transactions and identifies suspicious activity using machine learning.
+
+Q: How does FraudShield detect fraud?
+A: FraudShield analyzes transaction patterns, behavioral signals, and anomalies using machine learning to detect fraud in real time.
+
+Q: Does FinFraud provide risk scoring?
+A: Yes, FinFraud provides an advanced risk scoring system that evaluates transaction risk on a scale from 0 to 100.
+
+Q: What factors are used in FinFraud’s risk scoring?
+A: The risk scoring system analyzes over 150 signals including customer behavior, device fingerprinting, and transaction context.
+
+Q: What is the PaymentVault API?
+A: PaymentVault is FinFraud’s secure payment processing API that provides end-to-end encrypted transaction handling.
+
+Q: What payment methods does PaymentVault support?
+A: PaymentVault supports credit cards, digital wallets, and bank transfers.
+
+Q: Does FinFraud offer customer verification tools?
+A: Yes, FinFraud provides AI-powered customer verification tools using multi-factor authentication and biometric technology.
+
+Q: What biometric methods are supported?
+A: Supported methods include fingerprint recognition, facial recognition, and one-time password authentication.
+
+Q: Does FinFraud support regulatory compliance?
+A: Yes, FinFraud offers a compliance management system that supports standards such as PCI-DSS, GDPR, and SOX.
+
+Q: Does FinFraud use blockchain technology?
+A: Yes, FinFraud has implemented blockchain-based settlement capabilities for secure and transparent transaction processing.
+
+Q: Is FinFraud a consumer banking service?
+A: No, FinFraud does not provide consumer banking or lending services.
+
+Q: Does FinFraud provide marketing or advertising services?
+A: No, FinFraud does not offer marketing, PR, or advertising services.
+
+Q: Is FinFraud a generic SaaS platform?
+A: No, FinFraud focuses on financial fraud prevention and secure payment infrastructure, not generic SaaS products.
+
+Q: Who are FinFraud’s typical clients?
+A: FinFraud works with e-commerce companies, payment processors, and financial service providers.
+
+Q: Does FinFraud provide legal or financial advice?
+A: No, FinFraud does not provide legal or financial advisory services.

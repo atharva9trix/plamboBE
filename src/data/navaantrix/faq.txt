@@ -1,0 +1,23 @@
+Q: What does Navaantrix do?
+A: Navaantrix builds custom software, automation systems, and AI-enabled solutions tailored to specific business needs.
+
+Q: Does Navaantrix offer ready-made SaaS products?
+A: No, Navaantrix focuses on custom-built solutions rather than generic SaaS products.
+
+Q: Who are Navaantrix’s typical clients?
+A: Startups, small and medium businesses, and enterprises requiring customized technology solutions.
+
+Q: Does Navaantrix build AI chatbots?
+A: Yes, Navaantrix develops AI-powered chatbots and internal knowledge systems for businesses.
+
+Q: Does Navaantrix provide cloud-based services?
+A: Navaantrix can integrate cloud services but is not a cloud-only service provider.
+
+Q: Does Navaantrix handle marketing or CRM work?
+A: No, Navaantrix does not provide marketing, PR, or CRM services.
+
+Q: Can Navaantrix automate internal business processes?
+A: Yes, automation of internal workflows and processes is a core offering.
+
+Q: Does Navaantrix provide consulting services?
+A: Yes, Navaantrix offers technical consulting and advisory services.
