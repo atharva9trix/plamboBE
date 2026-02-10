@@ -1,4 +1,4 @@
-API_PREFIX = "/api"
+API_PREFIX = "/plambo_dev"
 
 CLIENTS = {
     "client_a": {"profile_path": "data/client_a"},

@@ -4,6 +4,7 @@ from src.controllers.web_controller import web_bp
 from src.controllers.health_controller import health_bp
 from src.middlewares.error_handler import register_error_handlers
 from src.config.settings import API_PREFIX
+from src.controllers.tatva_controller import tatvaAI_bp
 
 def create_app():
     app = Flask(__name__)
@@ -11,6 +12,7 @@ def create_app():
     app.register_blueprint(query_bp, url_prefix=API_PREFIX)
     app.register_blueprint(web_bp, url_prefix=API_PREFIX)
     app.register_blueprint(health_bp, url_prefix=API_PREFIX)
+    app.register_blueprint(tatvaAI_bp, url_prefix=API_PREFIX)
 
     register_error_handlers(app)
     return app

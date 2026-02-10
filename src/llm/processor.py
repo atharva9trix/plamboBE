@@ -6,7 +6,7 @@ class LLMProcessor:
     def process_query(
             self,
             query: str,
-            retrieved_documents: List[Tuple[str, float]],
+            retrieved_documents: str,
             profile_id: str,
             conversation_context= None
     ) -> str:
