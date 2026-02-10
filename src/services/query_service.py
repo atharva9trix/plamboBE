@@ -10,7 +10,9 @@ class QueryService:
         query = payload["query"]
 
         vector_store = profile_manager.load_profile(client_id)
+        print("vector store",vector_store)
         documents = vector_store.retrieve(query)
+        print("Doc")
 
         # query: str,
         # retrieved_documents: List[Tuple[str, float]],

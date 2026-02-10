@@ -7,5 +7,6 @@ query_bp = Blueprint("query", __name__)
 @query_bp.route("/query", methods=["POST"])
 def query():
     payload = request.get_json()
+    print(payload)
     QueryValidator.validate(payload)
     return jsonify(QueryService.process(payload))

@@ -16,6 +16,7 @@ base_path = config.STD_PATH
 def create_session():
     try:
         user_id=request.args.get("user_id")
+        print(user_id)
         if not user_id:
             return jsonify({"error": "user_id required"}), 400
 
@@ -37,6 +38,7 @@ def fetch_attr_dtype():
         return jsonify({"error": "Missing fields user_id or session_id"}), 400
     upload_path = os.path.join(base_path, file_.filename)
     file_.save(upload_path)
+    print("file saved success")
     fetch_attribute_dtype = dtype_obj.fetch_attr_dtype(upload_path, user_id, session_id)
     print(fetch_attribute_dtype)
     return jsonify(fetch_attribute_dtype), 200

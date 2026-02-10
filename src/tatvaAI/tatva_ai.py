@@ -29,7 +29,7 @@ class TatvaAIMain():
     def get_user_session_id(self, user_id):
         created_on = datetime.now().strftime("%m-%d-%Y %H:%M:%S")
         conn, msg = self.connection.connect_engine()
-
+        print(conn, msg )
         query_ = f"""select "User_Session_Id" from "User_Session" where "User_Id"='{user_id}' and "Flag"=0;"""
         sesion_id_df, msg = self.db_funct.fetch_data(query_, conn)
         session_id = sesion_id_df['User_Session_Id'].to_list()
