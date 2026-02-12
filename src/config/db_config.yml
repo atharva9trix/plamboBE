@@ -1,3 +1,11 @@
+PRODUCTION:
+  DB_DRIVERNAME : "postgresql+psycopg2"
+  DB_USERNAME : "navaandbuser"
+  DB_DBNAME : "plambo"
+  DB_PASSWORD : "plambo@321"
+  DB_HOST: "localhost"
+  DB_PORT: "5432"
+
 DEVELOPMENT:
   DB_DRIVERNAME : "postgresql+psycopg2"
   DB_USERNAME : "postgres"
@@ -6,3 +14,4 @@ DEVELOPMENT:
   DB_DBNAME : "plambo"
   DB_HOST : "localhost"
   DB_PORT : "5432"
+  

@@ -2,7 +2,7 @@ import yaml
 import os
 
 class Config:
-    def __init__(self, environment='DEVELOPMENT', yaml_file='config.yml'):
+    def __init__(self, environment='PRODUCTION', yaml_file='config.yml'):
         self.environment = environment
         self.config = self._get_config(environment)
         self._populate_attributes()

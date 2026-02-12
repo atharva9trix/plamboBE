@@ -1,7 +1,6 @@
 from src.config.settings import ENABLE_NO_CONTEXT_FALLBACK, LLM_TEMPERATURE, OLLAMA_BASE_URL, LLM_MODEL
 import requests
 
-
 SYSTEM_CONTRACT = """You are a knowledge-aware assistant for a specific knowledge profile ({profile_id}).
 
 
@@ -46,6 +45,7 @@ RULES:
 5. If information is uncertain, acknowledge it
 """
 
+
 class LLMProcessor:
 
     def __init__(self, base_url: str = OLLAMA_BASE_URL):
@@ -54,8 +54,8 @@ class LLMProcessor:
         self.api_endpoint = f"{base_url}/api/generate"
         # self._verify_ollama_connection()
 
-    #def process_query(self, query, retrieved_documents, profile_id):
-     #   return f"LLM answer for {profile_id}: {query}"
+    # def process_query(self, query, retrieved_documents, profile_id):
+    #   return f"LLM answer for {profile_id}: {query}"
     def _is_not_found_response(self, response: str) -> bool:
         """
         Detect if the LLM response indicates it couldn't find the information.
@@ -111,12 +111,12 @@ class LLMProcessor:
 
         return self._call_ollama(prompt, timeout=30)
 
-    def _build_context_string(self, documents) :
+    def _build_context_string(self, documents):
         """Build formatted context string from retrieved documents"""
         context_parts = ["=== KNOWLEDGE BASE CONTEXT ===", ""]
 
         for i, (doc_text, score) in enumerate(documents, 1):
-            print(i,(doc_text, score))
+            print(i, (doc_text, score))
             context_parts.extend([
                 f"[Source {i}] (Relevance Score: {score:.1%})",
                 "-" * 40,
@@ -130,7 +130,7 @@ class LLMProcessor:
         return "\n".join(context_parts)
 
     def _build_prompt(self, query: str, context: str, profile_id: str,
-                      conversation_context = None) :
+                      conversation_context=None):
         """Build the final prompt with system contract enforced and optional conversation context for follow-ups"""
 
         # Inject conversation context if available (for follow-up questions)
@@ -144,11 +144,11 @@ class LLMProcessor:
         return f"""<system_contract>
                 {system_rules}
                 </system_contract>
-            
+
                 CONTEXT FROM KNOWLEDGE BASE:
                 {context}{context_injection}
                 QUESTION: {query}
-            
+
                 ANSWER (using ONLY the context above, following the system contract):"""
 
     def _call_ollama(self, prompt: str, timeout: int = 500) -> str:
@@ -173,7 +173,7 @@ class LLMProcessor:
                 },
                 timeout=timeout
             )
-            print("This is try section of call_ollama",response.status_code)
+            print("This is try section of call_ollama", response.status_code)
             if response.status_code == 200:
                 print("response code is 200")
                 answer = response.json().get("response", "").strip()
@@ -197,13 +197,12 @@ class LLMProcessor:
             print(f"Error calling Ollama: {str(e)}")
             return f"ERROR: LLM processing failed: {str(e)}"
 
-
     def process_query(
             self,
             query: str,
             retrieved_documents: str,
             profile_id: str,
-            conversation_context= None
+            conversation_context=None
     ) -> str:
         """
         Process a query with retrieved context through Ollama gemma3:1b.
@@ -251,8 +250,8 @@ class LLMProcessor:
 
         return answer
 
-
     def process_web_query(self, query):
         return f"Web answer: {query}"
+
 
 llm_processor = LLMProcessor()

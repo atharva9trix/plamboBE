@@ -4,10 +4,11 @@ from functools import wraps
 import numpy as np
 import pandas as pd, os, json, csv
 import pyarrow.parquet as pq
-import shutil,glob
-from src.db_connection.db_engine import Engine,Read_Write
+import shutil, glob
+from src.db_connection.db_engine import Engine, Read_Write
 from pandas.api.types import infer_dtype
 from src.file_handling.read_write_data import Readwrite
+
 
 def db_connection(connect_method_name, disconnect_method_name):
     def decorator(func):
@@ -23,7 +24,9 @@ def db_connection(connect_method_name, disconnect_method_name):
             finally:
                 disconnect_method(connection)
                 print("Disconnected from DB")
+
         return wrapper
+
     return decorator
 
 
@@ -33,8 +36,10 @@ class FetchDataType:
         self.connection = Engine()
         self.db_func = Read_Write()
 
-    def fetch_col_dtype_excel(self,file_path,sheet_name=0):
-        df = self.read_excel(file_path,sheet_name)
+    def fetch_col_dtype_excel(self, file_path, sheet_name=0):
+        df = pd.read_excel(file_path, sheet_name)
+        # df = self.read_excel(file_path,sheet_name)
+        print(df, "/n this is df ")
 
         descriptive_data_types = {}
         for col in df.columns:
@@ -57,12 +62,12 @@ class FetchDataType:
                 else:
                     dtype = "string"
             else:
-                dtype = "other"
-            descriptive_data_types[col]=dtype
-        json_dict = json.dumps(descriptive_data_types,default=str)
-        return json_dict,df
+                dtype = "string"
+            descriptive_data_types[col] = dtype
+        json_dict = json.dumps(descriptive_data_types, default=str)
+        return json_dict, df
 
-    def read_excel(self,filepath,sheetname):
+    def read_excel(self, filepath, sheetname):
         try:
             df = pd.read_excel(filepath, sheet_name=sheetname, header=None)
             first_row_non_null = df.iloc[0].notna().sum()
@@ -97,34 +102,32 @@ class FetchDataType:
     #     data = df1.iloc[header_row_index:].reset_index(drop=True)
     #     data.columns = columns
 
-
-
-    def save_parquet(self,file_path,parquet_file_path,file_ext,sheetname=0,engine=None):
+    def save_parquet(self, file_path, parquet_file_path, file_ext, sheetname=0, engine=None):
         try:
             if file_ext.lower() in [".xlsm", ".xlsx"]:
-                df=pd.read_parquet(parquet_file_path,engine='pyarrow')
-                #df = self.read_write.read_data(file_path, sheet_name=sheetname, engine='pandas')
+                df = pd.read_parquet(parquet_file_path, engine='pyarrow')
+                # df = self.read_write.read_data(file_path, sheet_name=sheetname, engine='pandas')
                 df.to_parquet(parquet_file_path, index=False, engine='fastparquet')
 
             elif file_ext == ".parquet":
                 shutil.copy(file_path, parquet_file_path)
 
-            elif file_ext in ['.csv','.txt']:
+            elif file_ext in ['.csv', '.txt']:
                 df = self.fetch_df_csv(file_path)
                 df.to_parquet(parquet_file_path, index=False, engine='fastparquet')
 
             else:
                 return {'status': 'failed', 'message': 'Unsupported file type'}, 0
 
-            return {'status':'successfully converted the file to parquet'}, 1
+            return {'status': 'successfully converted the file to parquet'}, 1
         except Exception as e:
             return {'status': 'failed', 'error': str(e)}
 
-    def map_attribute_details(self,json_dict,user_file_id,connection=None):
+    def map_attribute_details(self, json_dict, user_file_id, connection=None):
         date_today = datetime.today().replace(microsecond=0)
         log_entry = pd.DataFrame([{
             "User_Session_File_Id": user_file_id, "Data_Types": json_dict,
-            "Status":'active',"Created_On":date_today}])
+            "Status": 'active', "Created_On": date_today}])
         status_create_account, status = self.db_func.post_data(log_entry, "Attribute_Details", connection)
 
         # query = f'''UPDATE "Attribute_Details" SET "Data_Types" =
@@ -137,16 +140,15 @@ class FetchDataType:
         else:
             return {'status': 'failed to post data in attribute_details'}
 
-
-    def fetch_col_dtpe_parquet(self,file_path):
-        df=pd.read_parquet(file_path)
+    def fetch_col_dtpe_parquet(self, file_path):
+        df = pd.read_parquet(file_path)
         schema = pq.read_schema(file_path)
         schema_dict = {name: str(schema.field(name).type) for name in schema.names}
         json_dict = json.dumps(schema_dict, default=str)
-        return json_dict,df
+        return json_dict, df
 
-    def fetch_col_dtype_csv(self,file_path):
-        df=self.fetch_df_csv(file_path)
+    def fetch_col_dtype_csv(self, file_path):
+        df = self.fetch_df_csv(file_path)
         obj_cols = df.select_dtypes(include=["object"]).columns
         df[obj_cols] = df[obj_cols].apply(
             lambda col: pd.to_datetime(col, errors="ignore"))
@@ -160,14 +162,14 @@ class FetchDataType:
         cols_and_dtypes = df.dtypes.astype(str).map(dtype_mapping).to_dict()
 
         json_dict = json.dumps(cols_and_dtypes, default=str)
-        return json_dict,df
+        return json_dict, df
 
-    def fetch_delimiter(self,file_path):
+    def fetch_delimiter(self, file_path):
         encoding_list = ["utf-8", "utf-16", "latin-1"]
         common_delimiters = [",", "|", "\t", ";", ":"]
         for enc in encoding_list:
             try:
-                with open(file_path, "r", encoding=enc,errors='ignore') as f:
+                with open(file_path, "r", encoding=enc, errors='ignore') as f:
                     sample = f.read(4096)
                     f.seek(0)
                     try:
@@ -189,14 +191,14 @@ class FetchDataType:
             except Exception as e:
                 return e
 
-    def map_filenames(self,old_name,new_name,user_sessin_id,connection=None):
+    def map_filenames(self, old_name, new_name, user_sessin_id, connection=None):
         date_today = datetime.today().replace(microsecond=0)
         log_entry = pd.DataFrame([{
-            "File_Name": old_name, "Updated_Filename": new_name,"User_Session_Id":user_sessin_id,
-            "Status":'active',"Created_On":date_today}])
+            "File_Name": old_name, "Updated_Filename": new_name, "User_Session_Id": user_sessin_id,
+            "Status": 'active', "Created_On": date_today}])
 
         status_create_account, status = self.db_func.post_data(log_entry, "File_Name_Details", connection)
-        if status==1:
+        if status == 1:
             query = f'''SELECT "User_Session_File_Id" from "File_Name_Details" WHERE "User_Session_Id" = ('{user_sessin_id}')'''
             df, status = self.db_func.fetch_data(query, connection)
             user_file_id = df['User_Session_File_Id'][0]
@@ -204,7 +206,7 @@ class FetchDataType:
         else:
             return {'status': 'failed to post data in File_Name_Details table'}
 
-    def map_user_session(self,user_id,session_id,connection=None):
+    def map_user_session(self, user_id, session_id, connection=None):
         # date_today = datetime.today().replace(microsecond=0)
         # log_entry = pd.DataFrame([{
         #     "User_Id": user_id, "Session_Id": session_id,"Created_On":date_today,"Status":'active'}])
@@ -215,12 +217,12 @@ class FetchDataType:
             query = f'''SELECT "User_Session_Id" from "User_Session" WHERE "User_Id" = ('{user_id}') and "Session_Id"= ('{session_id}')'''
             df, status = self.db_func.fetch_data(query, connection)
             user_sess_id = df['User_Session_Id'][0]
-            print('user_id',user_sess_id)
+            print('user_id', user_sess_id)
             return user_sess_id
         except:
             return {'status': 'failed to post data in User_Session'}
 
-    def fetch_df_csv(self,file_path):
+    def fetch_df_csv(self, file_path):
         delimiter = self.fetch_delimiter(file_path)
         if delimiter == "whitespace":
             df = pd.read_csv(file_path, sep=r"\s+", engine="python")
@@ -230,8 +232,9 @@ class FetchDataType:
             df = pd.read_csv(file_path, sep=delimiter)
         return df
 
-    def fetch_json_dict(self,file_path,file_ext,sheet_name):
+    def fetch_json_dict(self, file_path, file_ext, sheet_name):
         try:
+            print(file_path, file_ext, sheet_name, "This is fetch json ditc function")
             json_dict = {}
             new_path = file_path
             if file_ext == ".paraquet":
@@ -244,11 +247,16 @@ class FetchDataType:
                 ".parquet": self.fetch_col_dtpe_parquet,
                 ".csv": self.fetch_col_dtype_csv,
                 ".txt": self.fetch_col_dtype_csv,
-                ".json": self.get_json_schema,}
-
+                ".json": self.get_json_schema, }
+            print("This handler map", handler_map)
             if file_ext in handler_map:
                 json_dict, df = handler_map[file_ext](new_path)
+            #                json_dict = {
+            #                          k: "string" if v == "other" else v
+            #                          for k, v in json_dict.items()
+            #                      }
 
+            print(json_dict, df, "This is json_dict file")
             return json_dict, new_path, df
 
         except Exception as e:
@@ -270,7 +278,7 @@ class FetchDataType:
         # except Exception as e:
         #     return e
 
-    def infer_type(self,value):
+    def infer_type(self, value):
         if isinstance(value, bool):
             return "boolean"
         elif isinstance(value, int):
@@ -291,7 +299,7 @@ class FetchDataType:
             return "object"
         return "unknown"
 
-    def flatten_json(self,obj, parent_key=""):
+    def flatten_json(self, obj, parent_key=""):
         schema = {}
         if isinstance(obj, dict):
             for k, v in obj.items():
@@ -310,19 +318,19 @@ class FetchDataType:
             schema[parent_key] = self.infer_type(obj)
         return schema
 
-    def get_json_schema(self,file_path):
+    def get_json_schema(self, file_path):
         with open(file_path, "r") as f:
             data = json.load(f)
 
         if isinstance(data, list) and data:
-            dict=self.flatten_json(data[0])
+            dict = self.flatten_json(data[0])
             df = pd.DataFrame(data)
-            return json.dumps(dict,default=str),df
+            return json.dumps(dict, default=str), df
 
         else:
-            dict=self.flatten_json(data)
+            dict = self.flatten_json(data)
             df = pd.DataFrame(data)
-            return json.dumps(dict,default=str),df
+            return json.dumps(dict, default=str), df
 
     # def handle_dtype(self,df,update_dtype):
     #     try:
@@ -347,18 +355,19 @@ class Update_File:
         self.read_write = Readwrite()
         self.connection = Engine()
         self.db_func = Read_Write()
-    def fetch_user_session_id(self,user_id,session_id,connection):
+
+    def fetch_user_session_id(self, user_id, session_id, connection):
         query = f'''SELECT "User_Session_Id" from "User_Session" WHERE "User_Id" = ('{user_id}') and "Session_Id"= ('{session_id}')'''
         df, status = self.db_func.fetch_data(query, connection)
         user_sess_id = df['User_Session_Id'][0]
-        return user_sess_id,status
+        return user_sess_id, status
 
-    def update_file_name(self,original_name,new_filename,user_sess_id,connection):
+    def update_file_name(self, original_name, new_filename, user_sess_id, connection):
         query = f'''UPDATE "File_Name_Details" SET "File_Name" ='{original_name}',
                         "Updated_Filename"='{new_filename}' WHERE "User_Session_Id" = '{user_sess_id}';'''
         print(query)
         status_create_account, status = self.db_func.update_data(query, connection)
-        if status==1:
+        if status == 1:
             query = f'''SELECT "User_Session_File_Id" from "File_Name_Details" WHERE "User_Session_Id" = ('{user_sess_id}')'''
             df, status = self.db_func.fetch_data(query, connection)
             user_file_id = df['User_Session_File_Id'][0]
@@ -366,20 +375,30 @@ class Update_File:
         else:
             return 'failed to update data in File_Name_Details'
 
-    def update_json_dict(self,json_dict,user_file_id,connection):
+    def update_json_dict(self, json_dict, user_file_id, connection):
         query = f'''UPDATE "Attribute_Details" SET "Data_Types" =
                             '{json_dict}'::jsonb WHERE "User_Session_File_Id" = '{user_file_id}';'''
         print(query)
         status_create_account, status = self.db_func.update_data(query, connection)
-        if status==1:
+        print(status_create_account, status)
+        if status == 1:
             log_entry = pd.DataFrame([{
                 "User_Session_File_Id": user_file_id, "Data_Types": json_dict}])
             log_entry["Data_Types"] = log_entry["Data_Types"].apply(json.loads)
-            return log_entry.to_dict(orient='records')
+            print(log_entry)
+            print(log_entry.to_dict(orient='records'), "this is dict")
+            try:
+                print("thisa is try ")
+                ee = log_entry.to_dict(orient='records')
+                return ee
+            except Exception as e:
+                print("this is me athatb", e)
+                return e
         else:
             return 'failed to update json_dict in Attribute_Details'
 
-    def move_files(self,user_id, session_id, all_file_path, parquet_file_path, archived_all_file_path,archived_parquet_file_path):
+    def move_files(self, user_id, session_id, all_file_path, parquet_file_path, archived_all_file_path,
+                   archived_parquet_file_path):
         os.makedirs(archived_all_file_path, exist_ok=True)
         os.makedirs(archived_parquet_file_path, exist_ok=True)
 
@@ -396,7 +415,7 @@ class Update_File:
             return f"Moved {len(all_files)} from all_file and {len(parquet_files)} from parquet_file.", 1
 
 
-if __name__=='__main__':
-    a=FetchDataType()
-    v=a.get_json_schema("C:/Users/Asus/Downloads/sample_data.json")
+if __name__ == '__main__':
+    a = FetchDataType()
+    v = a.get_json_schema("C:/Users/Asus/Downloads/sample_data.json")
 
