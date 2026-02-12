@@ -47,23 +47,23 @@ CLIENTS = {
 
     "kalahari": {
         "name": "Kalahari",
-        "data_dir": PROJECT_ROOT / "backend" / "data" / "kalahari",
-        "vector_store_path": PROJECT_ROOT / "backend" / "vector_stores" / "kalahari_index.faiss",
-        "metadata_path": PROJECT_ROOT / "backend" / "vector_stores" / "kalahari_metadata.pkl"
+        "data_dir": "src/backend/data/kalahari",
+        "vector_store_path": "src/backend/vector_stores/kalahari_index.faiss",
+        "metadata_path": "src/backend/vector_stores/kalahari_metadata.pkl"
     },
 
     "sovereignsilver": {
         "name": "Sovereign Silver",
-        "data_dir": PROJECT_ROOT / "backend" / "data" / "sovereignsilver",
-        "vector_store_path": PROJECT_ROOT / "backend" / "vector_stores" / "sovereignsilver_index.faiss",
-        "metadata_path": PROJECT_ROOT / "backend" / "vector_stores" / "sovereignsilver_metadata.pkl"
+        "data_dir": "src/backend/data/sovereignsilver",
+        "vector_store_path": "src/backend/vector_stores/sovereignsilver_index.faiss",
+        "metadata_path": "src/backend/vector_stores/sovereignsilver_metadata.pkl"
     },
 
     "optima": {
         "name": "Optima",
-        "data_dir": PROJECT_ROOT / "backend" / "data" / "optima",
-        "vector_store_path": PROJECT_ROOT / "backend" / "vector_stores" / "optima_index.faiss",
-        "metadata_path": PROJECT_ROOT / "backend" / "vector_stores" / "optima_metadata.pkl"
+        "data_dir": "src/backend/data/optima",
+        "vector_store_path": "src/backend/vector_stores/optima_index.faiss",
+        "metadata_path": "src/backend/vector_stores/optima_metadata.pkl"
     }
 }
 
