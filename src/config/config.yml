@@ -1,0 +1,5 @@
+STD_PATH: "data"
+STD_ALL_FILE_PATH : "data/all_files"
+STD_PARQUET_PATH : "data/parquet_files"
+ARCHIVED_ALL_PATH : "data/archived/all_files"
+ARCHIVED_PARQUET_PATH : "data/archived/parquet_files"
