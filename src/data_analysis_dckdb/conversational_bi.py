@@ -24,7 +24,7 @@ class AnalyticalFilter:
         self.api_limit = 250
 
         ### APIS -- [Sam Navaantrix, Sam Personal]
-        self.api_keys = ['AIzaSyCt5OmpfOgpRJSaa1XbacyLAQGs7IVyrDY','AIzaSyB8bDMs2rrY0sunI08b3x7bUL5qbc2qUiE', 'AIzaSyCaJa2tp4WXmWMNZr2WFkHqiz4RwEkla24']  ##
+        self.api_keys = []  ##
         # self.client = genai.Client(
         #    api_key=self.api_key,)
 
